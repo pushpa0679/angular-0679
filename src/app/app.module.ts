@@ -9,6 +9,8 @@ import { SimpleComponent } from './simple/simple.component';
 import { ContextComponent } from './context/context.component';
 import { InputParentComponent } from './input-parent/input-parent.component';
 import { InputChildComponent } from './input-parent/input-child.component';
+import { NgContentChildParentComponent } from './ng-content-child-parent/ng-content-child-parent.component';
+import { NgContentChildChildComponent } from './ng-content-child-parent/ng-content-child-child.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -19,7 +21,9 @@ import { InputChildComponent } from './input-parent/input-child.component';
     SimpleComponent,
     ContextComponent,
     InputParentComponent,
-    InputChildComponent
+    InputChildComponent,
+    NgContentChildParentComponent,
+    NgContentChildChildComponent
   ],
   bootstrap: [AppComponent],
 })
