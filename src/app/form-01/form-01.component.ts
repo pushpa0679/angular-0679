@@ -4,7 +4,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-form-01',
   templateUrl: './form-01.component.html',
-  styleUrls: ['./form-01.component.css'],
 })
 export class Form01Component implements OnInit {
   userForm: FormGroup;
@@ -19,7 +18,8 @@ export class Form01Component implements OnInit {
     });
   }
 
-  get getControl() {
+  // convenience getter for easy access to form fields
+  get f() {
     return this.userForm.controls;
   }
   onSubmit() {
