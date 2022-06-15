@@ -29,7 +29,7 @@ export class Form1Component implements OnInit {
             Validators.maxLength(20),
           ],
         ],
-        email: ['', Validators.required, Validators.email],
+        email: ['', [Validators.required, Validators.email]],
         password: [
           '',
           [
