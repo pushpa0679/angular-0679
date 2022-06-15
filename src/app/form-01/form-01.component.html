@@ -14,7 +14,13 @@
               [ngClass]="{ 'is-invalid': f.name.touched && f.name.errors }"
             />
 
-            <div *ngIf="f.name.errors?.minlength">
+            <div
+              *ngIf="
+                'f.name.errors?.minlength'
+                  ? 'Minimum 4 chars are needed.'
+                  : 'required'
+              "
+            >
               Minimum 4 chars are needed.
             </div>
 
