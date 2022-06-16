@@ -42,7 +42,7 @@
         formControlName="email"
         [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
       />
-      
+
       <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
         <div *ngIf="f.email.errors.required">Email is Required</div>
         <div *ngIf="f.email.errors.email">Email is Invalid</div>
@@ -85,7 +85,7 @@
         <div *ngIf="f.confirmPassword.errors.required">
           Confirm Password is Required
         </div>
-        <div *ngIf="f.confirmPassword.errors.matching">
+        <div *ngIf="f.confirmPassword.errors.mustMatch">
           confirmPassword does not matching
         </div>
       </div>

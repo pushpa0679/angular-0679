@@ -34,13 +34,9 @@
             [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
           />
           <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-            <div
-              *ngIf="f.firstName.errors.required"
-              First
-              Name
-              is
-              Required
-            ></div>
+            <div *ngIf="f.firstName.errors.required">
+              First Name is Required
+            </div>
           </div>
         </div>
         <!-- Last Name -->

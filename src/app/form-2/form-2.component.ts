@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MustMatch } from '../helpers/must-match-validator';
 
 @Component({
   selector: 'app-form-2',
@@ -60,23 +61,4 @@ export class Form2Component implements OnInit {
     this.submitted = false;
     this.regForm.reset();
   }
-}
-
-function MustMatch(controlName: string, matchingControlName: string): any {
-  return (formGroup: FormGroup) => {
-    const control = formGroup.controls[controlName];
-    const matchingControl = formGroup.controls[matchingControlName];
-
-    if (matchingControl.errors && !matchingControl.errors.mustMatch) {
-      // return if another validator has already found an error on the matchingControl
-      return;
-    }
-
-    // set error on matchingControl if validation fails
-    if (control.value !== matchingControl.value) {
-      matchingControl.setErrors({ mustMatch: true });
-    } else {
-      matchingControl.setErrors(null);
-    }
-  };
 }
