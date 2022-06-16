@@ -54,6 +54,7 @@ export class Form1Component implements OnInit {
     this.submitted = true;
     if (this.form.invalid) return;
     console.log(JSON.stringify(this.form.value, null, 2));
+    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.form.value));
   }
   onReset(): void {
     this.submitted = false;
