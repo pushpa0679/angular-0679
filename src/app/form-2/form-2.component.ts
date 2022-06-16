@@ -35,7 +35,7 @@ export class Form2Component implements OnInit {
         acceptTerms: ['', Validators.required],
       },
       {
-        Validator: MustMatch('password', 'confirmPassword'),
+        validator: MustMatch('password', 'confirmPassword'),
       }
     );
   }
