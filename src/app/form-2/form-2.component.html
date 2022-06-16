@@ -103,7 +103,7 @@
           </div>
         </div>
         <!--Confirm Password -->
-        <div class="form-group col">
+        <!-- <div class="form-group col">
           <label>Confirm Password</label>
           <input
             class="form-control"
@@ -121,7 +121,19 @@
               Passwords must match
             </div>
           </div>
+        </div> -->
+      
+
+        <!-- 8888 -->
+        <div class="form-group col">
+        <label>Confirm Password</label>
+        <input type="password" formControlName="confirmPassword" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }" />
+        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+            <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+            <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
         </div>
+    </div>
+        <!-- 8888 -->
       </div>
       <!-- Terms & Conditions -->
       <div class="form-group form-check">
