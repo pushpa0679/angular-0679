@@ -35,6 +35,7 @@ export class Form2Component implements OnInit {
         acceptTerms: ['', Validators.required],
       },
       {
+        //validator must be small letter
         validator: MustMatch('password', 'confirmPassword'),
       }
     );
